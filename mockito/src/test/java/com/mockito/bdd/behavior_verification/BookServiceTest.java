@@ -49,5 +49,4 @@ public class BookServiceTest {
 		// Then - Assert/Verify
 		then(bookRepository).should().save(book);
 	}
-	
-}
+	}

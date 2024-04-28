@@ -6,11 +6,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features ="src/test/java/com/cucumber/features",
-glue = {"src/test/java/com/cucumber/stepDefinition"},
+@CucumberOptions(features ="src/test/java/com/cucumber/features/TagFeature.feature",
+glue = {"src/test/java/com/cucumber/stepDefinition/TagStepDefinition"},
 monochrome = true,
-plugin = {"pretty","html:target/HtmlReport"}
-
+plugin = {"pretty","junit:target/HtmlReport/report.xml"},
+tags = "@smoke"
 		)
 public class TestRunner {
 
